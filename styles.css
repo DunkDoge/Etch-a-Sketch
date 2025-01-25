@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    padding: 1rem
+}
+
+.container {
+    height: 480px;
+    width: 480px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    gap: 1px;
+    margin-top: 1px;
+}
+
+.col {
+    flex: 1;
+    background-color: aqua;
+    height: 6.51px;
+}
