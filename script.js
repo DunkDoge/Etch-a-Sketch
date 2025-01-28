@@ -4,7 +4,10 @@ const newGridBtn = document.querySelector("#newGridBtn");
 
 newGridBtn.addEventListener("click", function (e) {
     container.replaceChildren();
-    var gridSize = prompt("Enter a grid size (Between 10 and 100)");
+    var gridSize = Number(prompt("Enter a grid size (Between 10 and 100)"));
+    while (gridSize > 100 || gridSize < 10) {
+        gridSize = Number(prompt("Invalid. Please select a grid size between 10 and 100"));
+    }
     generateGrid(gridSize);
 })
 
@@ -46,4 +49,10 @@ function generateGrid(gridSize){
 }
 
 window.onload = generateGrid(64);
+window.addEventListener("mousedown", function (e){
+    mouseIsDown = true;
+})
+window.addEventListener("mouseup", function (e){
+    mouseIsDown = false;
+})
 
